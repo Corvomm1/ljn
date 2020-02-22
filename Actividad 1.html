@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Actividad 1: Definicion y Funsiones</h1>
+
+<p>En esta actividad, lo que haremos sera ocupar las definiciones en nuestras variables.</p>
+
+<p>Tambien ocupar las funciones para realizar diferentes uniones o procesos como suma y resta</p>
+
+<p id="person"></p>
+<p id="school"></p>
+<p id="suma"></p>
+<p id="resta"></p>
+<p id="multiplicacion"></p>
+
+
+<script>
+// Create object 1:
+var person = {
+  firstName: "Mario De Jesus",
+  lastName : "Marquez Mujica",
+  cellphone: 9212368883,
+  id       :  920110389,
+  fullName : function() {
+      return this.firstName +" "+ this.lastName
+  }
+};
+// Display some data from the object 1:
+document.getElementById("person").innerHTML =
+person.fullName() +" "+ person["cellphone"] +" "+ person["id"] +"\n";
+
+
+//Create object 2:
+var school = {
+    nameSchool: "Universidad del valle de Mexico",
+    subName   : "UVM",
+    city      : "Merida",
+    cellphone : "+52 (81) 8266 3050",
+    fullSchool: function () {
+        return this.nameSchool +" "+ this.subName +" Ciudad: "+ this.city +" Numero: "+ this.cellphone;
+    }
+};
+// Display some data from the object 2:
+document.getElementById("school").innerHTML =
+school.fullSchool()+".\n";
+
+
+//Create object 3:
+var suma = {
+    texto1 : "Se realizara la suma de los numeros",
+    valor1 : 55,
+    valor2 :35,
+    texto2 : "El resultado de la sumas es:",
+    sumando: function () {
+        return this.valor1 + this.valor2;
+    }
+}
+// Display some data from the object 3:
+document.getElementById("suma").innerHTML =
+suma.texto1 +" "+ suma.valor1 +" y "+ suma.valor2 +"..."+ suma.texto2 +" "+ suma.sumando() +".\n";
+
+
+//Create oblect 4:
+var resta = {
+    texto1 : "Se realizara la resta de los numeros",
+    valor1 : 100,
+    valor2 : 45,
+    texto2 : "El resultado de la resta es:",
+    restando: function () {
+        return this.valor1 - this.valor2;
+    }
+}
+// Display some data from the object 4:
+document.getElementById("resta").innerHTML =
+resta.texto1 +" "+ resta.valor1 +" y "+ resta.valor2 +"..."+ resta.texto2 +" "+ resta.restando() +".\n";
+
+
+//Create oblect 5:
+var multiplicar= {
+    texto1 : "Se realizara la multiplicacíon de los numeros",
+    valor1 : 55,
+    valor2 : 45,
+    texto2 : "El resultado de la multiplicacíon es:",
+    multiplicando: function () {
+        return this.valor1 * this.valor2;
+    }
+}
+// Display some data from the object 5:
+document.getElementById("multiplicacion").innerHTML =
+multiplicar.texto1 +" "+ multiplicar.valor1 +" y "+ multiplicar.valor2 +"..."+ multiplicar.texto2 +" "+ multiplicar.multiplicando() +".\n";
+</script>
+
+</body>
+</html>
